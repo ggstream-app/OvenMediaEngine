@@ -167,6 +167,7 @@ RUN \
         cd src && \
         mkdir -p ${PREFIX}/bin/origin_conf && \
         mkdir -p ${PREFIX}/bin/edge_conf && \
+        mkdir -p ${PREFIX}/bin/ssl && \
         strip ./bin/RELEASE/OvenMediaEngine && \
         cp ./bin/RELEASE/OvenMediaEngine ${PREFIX}/bin/ && \
         cp ../misc/conf_examples/Origin.xml ${PREFIX}/bin/origin_conf/Server.xml && \
