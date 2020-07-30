@@ -26,3 +26,5 @@ src/projects/main/git_info.h
 *.pc
 *.texi
 *.dump
+
+misc/ssl

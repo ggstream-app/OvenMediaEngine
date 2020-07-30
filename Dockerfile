@@ -173,6 +173,7 @@ RUN \
         cp ../misc/conf_examples/Logger.xml ${PREFIX}/bin/origin_conf/Logger.xml && \
         cp ../misc/conf_examples/Edge.xml ${PREFIX}/bin/edge_conf/Server.xml && \
         cp ../misc/conf_examples/Logger.xml ${PREFIX}/bin/edge_conf/Logger.xml && \
+        cp -R ../misc/ssl ${PREFIX}/bin/ssl && \
         rm -rf ${DIR}
 
 FROM	base AS release
