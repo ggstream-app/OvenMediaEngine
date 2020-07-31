@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  edge:
+    image: ggstream.azurecr.io/ggstream-ome
+    restart: always
+    ports:
+    - "3334:3334/tcp"
+    - "8443:8443/tcp"
+    - "10000-10005:10000-10005/udp"
+    environment:
+    - DEFAULT_ORIGIN_SERVER=svc-sea.ggstream.app
+    - OME_HLS_STREAM_PORT=8443
+    - OME_DASH_STREAM_PORT=8443
+    - OME_SIGNALLING_PORT=3334
+    - OME_ICE_CANDIDATES=*:10000-10005/udp
+    command: /opt/ovenmediaengine/bin/OvenMediaEngine -c edge_conf
