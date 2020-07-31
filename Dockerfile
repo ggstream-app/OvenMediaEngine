@@ -152,11 +152,10 @@ RUN \
         rm -rf ${DIR}
 
 ## Build OvenMediaEngine
+COPY . /tmp/ome
 RUN \
         DIR=/tmp/ome && \
-        mkdir -p ${DIR} && \
         cd ${DIR} && \
-        curl -sLf https://github.com/AirenSoft/OvenMediaEngine/archive/${OME_VERSION}.tar.gz | tar -xz --strip-components=1 && \
         cd src && \
         make release
 
@@ -174,7 +173,7 @@ RUN \
         cp ../misc/conf_examples/Logger.xml ${PREFIX}/bin/origin_conf/Logger.xml && \
         cp ../misc/conf_examples/Edge.xml ${PREFIX}/bin/edge_conf/Server.xml && \
         cp ../misc/conf_examples/Logger.xml ${PREFIX}/bin/edge_conf/Logger.xml && \
-        cp -R ../misc/ssl ${PREFIX}/bin/ssl && \
+        cp ../misc/ssl/* ${PREFIX}/bin/ssl && \
         rm -rf ${DIR}
 
 FROM	base AS release
