@@ -73,13 +73,11 @@
 					-->
 					<Name>*</Name>
 				</Names>
-				<!--
 				<TLS>
-					<CertPath>path/to/file.crt</CertPath>
-					<KeyPath>path/to/file.key</KeyPath>
-					<ChainCertPath>path/to/file.crt</ChainCertPath>
+					<CertPath>/opt/ovenmediaengine/bin/ssl/cert.crt</CertPath>
+					<KeyPath>/opt/ovenmediaengine/bin/ssl/cert.key</KeyPath>
+					<ChainCertPath>/opt/ovenmediaengine/bin/ssl/chain.crt</ChainCertPath>
 				</TLS>
-				-->
 			</Domain>
 			<!--
 			<Origins>
