@@ -6,11 +6,11 @@ services:
     restart: always
     ports:
     - "1935:1935/tcp"
-    - "3333:3333/tcp"
-    - "8080:8080/tcp"
+    - "3334:3334/tcp"
+    - "8443:8443/tcp"
     - "9000:9000/tcp"
     - "4000-4005:4000-4005/udp"
-    - "10006-10010:10006-10010/udp"
+    - "10000-10005:10000-10005/udp"
     environment:
     - OME_ORIGIN_PORT=9000
     - OME_RTMP_PROV_PORT=1935
